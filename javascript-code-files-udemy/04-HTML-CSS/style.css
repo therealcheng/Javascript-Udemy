@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: whitesmoke;
+	font-family: "Comic Sans MS";
+	font-size: 20px;
+	padding: 50px;
+
+}
+
+h1 {
+font-size: 20px;
+margin-bottom: 25px;
+}
+
+
+h2 {
+margin-bottom: 20px;
+text-align: center;
+}
+
+p{
+margin-bottom: 20px;
+}
+
+.first{
+	color: darkred;
+}
+
+#your-name{
+	color: yellowgreen;
+	border: 5px solid black;
+	width:  400px;
+	padding: 25px;
+	margin-top: 30px;
+}
+ 
+#javascript-image{
+	width: 200px; 
+    height: auto;
+}
+
+input,button{
+	padding: 10px;
+	font-size: 16px;
+
+}
+
+a{
+	background-color: yellowgreen;
+}
+
+
+
+#your-name h2{
+	color: olivedrabl;
+}
