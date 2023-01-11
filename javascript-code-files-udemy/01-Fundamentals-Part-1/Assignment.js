@@ -1,6 +1,7 @@
 // ? Javascript Fundenmentals Part I
-
+console.log('test');
 /*
+// ? Notes from Udemy Course
 // ! Assignments
 let country = "United Kingdom";
 let continent = "Europe";
@@ -287,16 +288,23 @@ const drink = age >= 18 ? 'I can drink Wine 🍷🍷' : 'Cannot drink wine :('
 console.log(drink)
 
 console.log(`So....   ${age >= 18 ? 'I can drink Wine 🍷🍷' : 'Cannot drink wine :('}`);
-*/
+
 // !LECTURE 20: Coding Challenge #4
 
 const bill = 430;
 
 // * ternary operator
-bill >= 50 && bill <= 300 ? console.log(`$${bill * 0.15} 😉`) : console.log(`$${bill * 0.20} 😙`);
+bill >= 50 && bill <= 300
+  ? console.log(`$${bill * 0.15} 😉`)
+  : console.log(`$${bill * 0.2} 😙`);
 
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
-console.log(tip)
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(tip);
 
 //* Print String to console containing bill value, the tip and the final value.
-console.log(`The bill was $${bill}, the tip was $${tip} and the total value $${bill + tip}`)
+console.log(
+  `The bill was $${bill}, the tip was $${tip} and the total value $${
+    bill + tip
+  }`
+);
+*/
