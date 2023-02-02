@@ -1,38 +1,35 @@
 'use strict';
-/*
-console.log(document.querySelector('.message').textContent);
-document.querySelector('.message').textContent = 'DOM MANIPULATION!';
-console.log(document.querySelector('.message').textContent);
 
-document.querySelector('.number').textContent = 13;
-document.querySelector('.score').textContent = 69;
-document.querySelector('.guess').value = 23; 
-*/
-
+// ? Numbers
 let secretNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
+// ? DOM
+const check = document.querySelector('.check');
+const number = document.querySelector('.number');
+const body = document.querySelector('body');
+const scoreText = document.querySelector('.score').textContent;
+
+// Updates Message
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-document.querySelector('.check').addEventListener('click', function () {
+// Game Logic
+check.addEventListener('click', () => {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
 
-  // when there is wrong input
+  // when there is wrong input, update message to say this.
   if (!guess || guess > 20 || guess < 0) {
-    // document.querySelector('.message').textContent = 'This is not between 1 and 20!';
     displayMessage('This is not between 1 and 20!');
-
-    //when guess is the right number
   } else if (guess === secretNumber) {
     displayMessage('CORRECT!');
-    document.querySelector('.number').textContent = secretNumber;
-    document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.number').style.width = '30rem';
+    number.textContent = secretNumber;
+    body.style.backgroundColor = '#60b347';
+    number.style.width = '30rem';
     if (score > highScore) {
+      // update high score
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
@@ -41,11 +38,10 @@ document.querySelector('.check').addEventListener('click', function () {
       // document.querySelector('.message').textContent = 'guess > secretNumber ? 'Too High !!' : 'Too Low !!'
       displayMessage(guess > secretNumber ? 'Too High !!' : 'Too Low !!');
       score--;
-      document.querySelector('.score').textContent = score;
+      scoreText = score;
     } else {
-      // document.querySelector('.message').textContent = '💥 You Lost !!';
       displayMessage('💥 You Lost !!');
-      document.querySelector('.score').textContent = 0;
+      scoreText = 0;
     }
   }
 
