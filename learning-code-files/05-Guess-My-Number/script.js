@@ -10,6 +10,7 @@ const check = document.querySelector('.check');
 const number = document.querySelector('.number');
 const body = document.querySelector('body');
 const scoreText = document.querySelector('.score').textContent;
+const numberText = document.querySelector('.number');
 
 // Updates Message
 const displayMessage = function (message) {
@@ -76,13 +77,13 @@ document.querySelector('.again').addEventListener('click', function () {
   //reset score back to 20
   score = 20;
   document.querySelector('.score').textContent = 'score';
-  document.querySelector('.number').textContent = '?';
+  numberText.textContent = '?';
   //changing text back to original 'start guessing'
   // document.querySelector('.message').textContent = 'Start guessing...';
   displayMessage('Start guessing...');
   // resetting width and background colour (if the player guessed correctly)
   document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.number').style.width = '15rem';
+  numberText.style.width = '15rem';
   //resetting guess value to nothing
   document.querySelector('.guess').value = '';
 });

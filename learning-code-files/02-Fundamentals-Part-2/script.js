@@ -1,5 +1,5 @@
 // ? JS Fundenmentals Part 2
-"use strict";
+'use strict';
 ////////////////////////////////////////////////////////
 /*
 // ! Activating Strict Mode
@@ -620,15 +620,15 @@ console.log(calcAverage(totals));
 
 const x = [12, 24, 36, 48, 60, 72, 84, 96];
 function calcCube(array) {
-    let name = 0; //? declare name = 0 before loop
-    for (let i = 0; i < array.length; i++) {
-        //? for every increment, addda
-        name += array[i];
-    }
-    console.log(name);
+  let name = 0; //? declare name = 0 before loop
+  for (let i = 0; i < array.length; i++) {
+    //? for every increment, addda
+    name += array[i];
+  }
+  console.log(name);
 }
 
 calcCube([8, 2, 2, 50]);
-console.log("hello world");
+console.log('hello world');
 console.log(`nah this is cool`);
-console.log("omg!!!!");
+console.log('omg!!!!');
