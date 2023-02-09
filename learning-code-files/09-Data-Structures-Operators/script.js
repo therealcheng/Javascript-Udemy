@@ -234,6 +234,18 @@ const ingredients = [
 
 restaurant.orderPasta(...ingredients);
 
+// && OP
+console.log('---- AND OP ----');
+console.log(7 && 'jonas');
+
+//practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+//simpler way
+guests1 && restaurant.orderPizza('Mushrooms', 'Spinach');
+
 /*
 //Booleans
 const plane = 'Airbus A320neo';
