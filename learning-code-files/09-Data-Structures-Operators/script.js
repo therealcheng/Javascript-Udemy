@@ -21,9 +21,9 @@ for (const flight of flights.split('+')) {
   )})`.padStart(36);
   console.log(output);
 }
-
+*/
 // Data needed for first part of the section
-const restsaurant = {
+const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
@@ -81,36 +81,7 @@ const ordersSet = new Set([
   'Pizza',
 ]);
 
-//Coding Challenge #4
-// using :
-// underscore_case
-//  first_name
-// Some_Variable
-//   calculate_AGE
-// delayed_departure
-
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
-
-document.querySelector('button').addEventListener('click', function () {
-  const text = document.querySelector('textarea').value;
-  const rows = text.split('\n');
-
-  for (const [i, row] of rows.entries()) {
-    const [first, second] = row.toLowerCase().trim().split('_');
-    // console.log(row, first, second);
-
-    const output = `${first}${second.replace(
-      second[0],
-      second[0].toUpperCase()
-    )}`;
-    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
-  }
-});
-*/
-
 // String methods 3
-
 // split & join
 console.log('a+very+nice+string'.split('+')); // Array(4) [ "a", "very", "nice", "string" ]
 const [firstName, lastName] = 'Cheng Lim'.split(' '); // fn=Cheng lm=Lim
@@ -158,26 +129,26 @@ planesInLine(14);
 const airline = 'British Airways';
 const plane = 'A350-100';
 
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log('B737'[0]);
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737'[0]);
 
-console.log(airline.length);
-console.log('B737'.length);
+// console.log(airline.length);
+// console.log('B737'.length);
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('Airways'));
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Airways'));
 
-console.log(airline.slice(8));
-console.log(airline.slice(3, 7));
+// console.log(airline.slice(8));
+// console.log(airline.slice(3, 7));
 
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
 
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -1));
 
 const checkMiddleSeat = function (seat) {
   // B & E are middle seats
@@ -188,9 +159,9 @@ const checkMiddleSeat = function (seat) {
     console.log(`You got lucky 😁`);
   }
 };
-checkMiddleSeat('11B');
-checkMiddleSeat('23C');
-checkMiddleSeat('3E');
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
 
 // String methods 2
 console.log(airline.toLowerCase());
@@ -223,6 +194,45 @@ console.log(priceUS);
 const announcement =
   'All passengers come to boarding door 23. Boarding door 23!';
 console.log(announcement.replaceAll('door', 'gate'));
+
+// Spread operator
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...arr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+
+console.log(newMenu);
+
+//copying arrays
+
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; //main menu and starter menu
+console.log(menu);
+
+// works on iterable: iterable = things like arrays, strings, maps or sets, but not objects.
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+
+// function with spread op
+
+const ingredients = [
+  prompt(`let's make pasta! Ingredient 1?`),
+  prompt(`Ingredient 2?`),
+  prompt(`Ingredient 3?`),
+];
+
+restaurant.orderPasta(...ingredients);
 
 /*
 //Booleans
@@ -529,48 +539,6 @@ console.log(i, j, k);
 //def values
 const [p = 1, q = 1, r = 1] = [8, 9]; // lets pretend we don't know the length 
 console.log(p,q,r);
-
-
-// Spread operator
-
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-
-console.log(badNewArr);
-
-const newArr = [1, 2, ...arr];
-console.log(newArr);
-
-console.log(...arr);
-
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-
-console.log(newMenu);
-
-//copying arrays
-
-const mainMenuCopy = [...restaurant.mainMenu];
-
-// Join 2 arrays
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; //main menu and starter menu
-console.log(menu);
-
-// works on iterable: iterable = things like arrays, strings, maps or sets, but not objects.
-const str = 'Jonas';
-const letters = [...str, '', 'S.'];
-console.log(letters);
-
-// function with spread op
-
-// const ingredients = [
-//   prompt(`let's make pasta! Ingredient 1?`),
-//   prompt(`Ingredient 2?`),
-//   prompt(`Ingredient 3?`),
-// ];
-// console.log(ingredients);
-
-// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
-// restaurant.orderPasta(...ingredients);
 
 //Objects
 const newRestaurant = {
