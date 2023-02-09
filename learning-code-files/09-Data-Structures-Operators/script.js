@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -107,16 +107,15 @@ document.querySelector('button').addEventListener('click', function () {
     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
   }
 });
+*/
 
-/*
 // String methods 3
+
 // split & join
-console.log('a+very+nice+string'.split('+'));
-
-const [firstName, lastName] = 'Cheng Lim'.split(' ');
-
+console.log('a+very+nice+string'.split('+')); // Array(4) [ "a", "very", "nice", "string" ]
+const [firstName, lastName] = 'Cheng Lim'.split(' '); // fn=Cheng lm=Lim
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
-console.log(newName);
+console.log(newName); // Mr. Cheng LIM
 
 const capitaliseName = function (name) {
   const names = name.split(' ');
@@ -193,7 +192,6 @@ checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
-
 // String methods 2
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
@@ -225,7 +223,6 @@ console.log(priceUS);
 const announcement =
   'All passengers come to boarding door 23. Boarding door 23!';
 console.log(announcement.replaceAll('door', 'gate'));
-*/
 
 /*
 //Booleans
