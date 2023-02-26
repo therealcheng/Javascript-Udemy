@@ -42,15 +42,35 @@ const game = {
 };
 
 // ? Challenge #1
-const players1 = game.players[0]; // Bayern
-const players2 = game.players[1]; // Dortmund
+// * rest & destructuring
+const [players1, players2] = game.players;
 console.log(players1, players2);
 
-const gk = players1.find((player) => player === 'Neuer');
-console.log(gk);
+const [gk, ...fieldPlayers] = players1;
 
-const fieldPlayers = players1.slice(1);
-console.log(fieldPlayers);
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers); // all players from both teams
 
-const allPlayers = players1.concat(players2);
-console.log(allPlayers);
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final); // Bayern + subs
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2); // 1.33, 3.25, 6.5
+
+const printGoals = (...players) => {
+  // print player to score to console
+  // total n of goals scored +1
+  players.forEach((player) => console.log(player));
+  console.log(`${players.length} goals were scored!`);
+};
+printGoals('Davies', 'Muller', 'Lewandowski');
+printGoals(...game.scored);
+
+true && true; // => true
+true && false; // => false
+// * && Evalution contiues if true
+// * || Evaluaton short circuits if true
+team1 < team2 && console.log('Bayern Munich is more likely to win');
+team1 > team2 && console.log('Borrusia Dotmund is more likely to win');
